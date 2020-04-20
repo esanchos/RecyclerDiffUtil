@@ -2,6 +2,8 @@ package com.earaujo.recyclerdiffutil
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.earaujo.recyclerdiffutil.gui.GuiAdapterMultiTypes
+import com.earaujo.recyclerdiffutil.gui.GuiModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         SimpleAdapterWithAnimations(::listOnClickWithAnimations)
     private val filterAdapterDiffUtil = SimpleAdapterDiffUtil(::listOnClickDiffUtil)
     private val filterListAdapter = SimpleListAdapter(::listOnClickListAdapter)
-
     private val filterString = GenericListAdapter{
         GenericViewHolderImpl.StringViewHolder(it, ::listOnClickGenericListAdapter)
     }
@@ -142,18 +143,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupButtonGenericListAdapter() {
-        addButton.setOnClickListener {
+        /*addButton.setOnClickListener {
             items.add((1..100).shuffled().first().toString())
             filterString.submitList(items.toList())
         }
         shuffleButton.setOnClickListener {
             filterString.submitList(items.shuffled().toList())
-        }
+        }*/
     }
 
     private fun listOnClickGenericListAdapter(position: Int) {
         items.removeAt(position)
-        filterString.submitList(items.toList())
+        //filterString.submitList(items.toList())
     }
 
 }

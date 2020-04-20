@@ -1,0 +1,2 @@
+rootProject.name='RecyclerDiffUtil'
+include ':app'

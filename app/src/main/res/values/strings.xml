@@ -2,4 +2,5 @@
     <string name="app_name">RecyclerDiffUtil</string>
     <string name="add">Add</string>
     <string name="shuffle">Shuffle</string>
+    <string name="sort">Sort</string>
 </resources>

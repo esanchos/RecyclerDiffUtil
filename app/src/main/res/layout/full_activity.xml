@@ -4,27 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/shuffleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shuffle"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/sort"
+        android:backgroundTint="#333"
+        android:textColor="#fff"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/selectRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="match_parent"
         android:layoutAnimation="@anim/layout_animation_fall_down"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/shuffleButton"
         app:spanCount="4"
         tools:listitem="@layout/full_item_list_image" />
 

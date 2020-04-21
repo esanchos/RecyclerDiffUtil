@@ -89,7 +89,8 @@ class GuiActivity : AppCompatActivity() {
     }
 
     private fun clickCallback(position: Int) {
-        println("$position")
+        items.removeAt(position)
+        guiFilter.submitList(items.toList())
     }
 
 }

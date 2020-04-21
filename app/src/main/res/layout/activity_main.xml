@@ -27,11 +27,12 @@
         android:id="@+id/selectRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
         android:layout_marginTop="15dp"
+        android:layoutAnimation="@anim/layout_animation_fall_down"
+        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/addButton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addButton"
         tools:listitem="@layout/item_list_filter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,8 +29,7 @@ class GuiAdapterMultiTypes<M: GuiAdapterMultiTypes.UiModel, VH: GuiViewHolderImp
         notifyDataSetChanged()
     }
 
-    interface UiModel {
-    }
+    interface UiModel
 
     abstract class GenericViewHolder<M>(view: View) : RecyclerView.ViewHolder(view) {
         abstract fun bind(model: M)

@@ -13,27 +13,14 @@ sealed class GenericViewHolderImpl<M>(itemView: View) :
     class StringViewHolder(
         parent: ViewGroup,
         private val callback: (Int) -> Unit
-    ) : GenericViewHolderImpl<GuiModel.StringModel>(
+    ) : GenericViewHolderImpl<String>(
         LayoutInflater
             .from(parent.context)
             .inflate(R.layout.item_list_filter, parent, false)
     ) {
-        override fun bind(model: GuiModel.StringModel) {
-            itemView.filterTextView.text = model.name
+        override fun bind(model: String) {
+            itemView.filterTextView.text = model
             itemView.setOnClickListener { callback(layoutPosition)  }
-        }
-    }
-
-    class UserViewHolder(
-        parent: ViewGroup
-    ) : GenericViewHolderImpl<GuiModel.UserModel>(
-        LayoutInflater
-            .from(parent.context)
-            .inflate(R.layout.item_list_user, parent, false)
-    ) {
-        override fun bind(model: GuiModel.UserModel) {
-            itemView.filterTextView.text = model.name
-            itemView.ageTextView.text = model.age.toString()
         }
     }
 
